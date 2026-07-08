@@ -1,0 +1,40 @@
+body {
+    font-family: system-ui;
+    text-align: center;
+    background-image: linear-gradient(to right, blue, purple);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    border: 1px solid black;
+    width: 30vh;
+    padding: 30px;
+    border-radius: 30px;
+    background-color: white;
+}
+
+input {
+    margin: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+#login {
+    background-color: black;
+    color: white;
+    font-weight: 500;
+}
+
+a {
+    color: black;
+}
