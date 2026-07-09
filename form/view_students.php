@@ -37,6 +37,7 @@
             <th>Departament</th>
             <th>Semester</th>
             <th>Update</th>
+            <th>Delete</th>
         </tr>
 
         <?php
@@ -55,6 +56,7 @@
             <td><?php echo $row['department']; ?></td>
             <td><?php echo $row['semester']; ?></td>
             <td><a href="update.php?id=<?php echo $row['id'];?>">Update this student</a></td>
+            <td><a href="delete.php?id=<?php echo $row['id'];?>">Delete this student</a></td>
         </tr>
 
         <?php

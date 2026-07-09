@@ -17,7 +17,7 @@
 
         $student_id = $_POST['student_id'];
         
-        $full_name = $_POST['full_name'];
+        $full_name = $_POST['full_ёname'];
 
         $email = $_POST['email'];
 
