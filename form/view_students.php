@@ -21,9 +21,6 @@
     <link rel="stylesheet" href="view_students.css">
 </head>
 <body>
-    <main>
-        
-    </main>
     <h2>Student List</h2>
 
     <form method="post">
@@ -39,6 +36,7 @@
             <th>Phone</th>
             <th>Departament</th>
             <th>Semester</th>
+            <th>Update</th>
         </tr>
 
         <?php
@@ -56,6 +54,7 @@
             <td><?php echo $row['phone']; ?></td>
             <td><?php echo $row['department']; ?></td>
             <td><?php echo $row['semester']; ?></td>
+            <td><a href="update.php?id=<?php echo $row['id'];?>">Update this student</a></td>
         </tr>
 
         <?php
