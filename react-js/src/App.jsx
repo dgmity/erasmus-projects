@@ -1,10 +1,35 @@
 function App() {
-  const students = ["Rahim", "Karim", "Sakib", "Hasan", "Hayeem", "Rafi"];
+  const students = [
+    {
+      name: "Maksim",
+      age: 17,
+      city: "Grodno"
+    },
+    {
+      name: "Stas",
+      age: 17,
+      city: "Novovolynsk"
+    },
+    {
+      name: "Wojtek",
+      age: 17,
+      city: "Komodzianka"
+    }, 
+    {
+      name: "Konrad",
+      age: 17,
+      city: "Mircze"
+    }
+  ]
 
   return (
     <div>
-      {students.filter((student) => student !== "Rahim" && student !== "Hasan").map((student, index) => (
-        <h2 key={index}>{student}</h2>
+      {students.map((student, index) => (
+        <div key={index}>
+          <h2>{student.name}</h2>
+          <p>Age: {student.age}</p>
+          <p>City: {student.city}</p>          
+        </div>
       ))}
     </div>
   );
