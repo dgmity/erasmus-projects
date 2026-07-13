@@ -1,11 +1,12 @@
-import Layout from "./Layout";
-import Student from "./Student";
-
 function App() {
-  const fruits = ["Apple", "Mango", "Banana"];
+  const students = ["Rahim", "Karim", "Jamal"];
   
   return (
-    <FruitList items={fruits} />
+    <div>
+      {students.map((student) => (
+        <h2>{student}</h2>
+      ))}
+    </div>
   );
 }
 
