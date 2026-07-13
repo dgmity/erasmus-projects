@@ -1,10 +1,10 @@
 function App() {
-  const students = ["Rahim", "Karim", "Jamal"];
+  const students = ["Rahim", "Karim", "Sakib", "Hasan", "Hayeem", "Rafi"];
   
   return (
     <div>
-      {students.map((student) => (
-        <h2>{student}</h2>
+      {students.slice(0,2).map((student, index) => (
+        <h2 key={index}>{student}</h2>
       ))}
     </div>
   );
