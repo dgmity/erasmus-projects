@@ -1,10 +1,10 @@
+import { useState } from "react";
+
 function App() {
-  function handleClick() {
-    alert("Hello React!");
-  }
+  const [liked, setLiked] = useState(false);
   return (
     <div>
-      <button onClick={handleClick}>Click me</button>
+      <button onClick={() => setLiked(!liked)}> {liked ? "Liked" : "Like"}</button>
     </div>
   )
 }
