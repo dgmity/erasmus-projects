@@ -1,8 +1,11 @@
 function App() {
-  const isLogin = false;
+  const stock = 5;
   return (
     <div>
-      {isLogin ? <h1>Welcome back</h1> : <h1>Please login</h1>}
+      {stock > 0
+        ? <h2>In Stock</h2>
+        : <h2>Out Of Stock</h2>
+      }
     </div>
   )
 }
