@@ -1,0 +1,20 @@
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    height: 15vh;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+a {
+    padding-left: 10px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}

@@ -1,0 +1,27 @@
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    align-items: center;
+    margin: 10px;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+input {
+    margin: 5px;
+}
+
+button {
+    margin: 5px;
+}
+
+a {
+    padding-left: 10px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
