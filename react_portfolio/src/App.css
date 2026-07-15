@@ -78,12 +78,11 @@ section:has(h2) {
   text-align: center;
 }
 
-.skills-container, 
-section:has(h2:contains("My Skills")) {
+.skills-container {
   text-align: center;
 }
 
-section:has(h2:contains("My Skills")) div,
+.skills,
 section h2 + div {
   display: inline-block;
 }
