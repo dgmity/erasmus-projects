@@ -1,0 +1,283 @@
+
+section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(11, 15, 25, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+nav img {
+  height: 40px;
+  width: auto;
+  border-radius: 8px;
+}
+
+nav a {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-left: 20px;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+section:has(img[alt="profile_image"]) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 85vh;
+  padding-top: 40px;
+}
+
+section img[alt="profile_image"] {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--accent-color);
+  margin-bottom: 24px;
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.3); 
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+h4 {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+section:has(h2) {
+  text-align: center;
+}
+
+.skills-container, 
+section:has(h2:contains("My Skills")) {
+  text-align: center;
+}
+
+section:has(h2:contains("My Skills")) div,
+section h2 + div {
+  display: inline-block;
+}
+
+section:has(h2) ~ section div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+section:has(h2) ~ section div p {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-main);
+  transition: all 0.2s ease;
+}
+
+section:has(h2) ~ section div p:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.15);
+}
+
+section:has(button) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 40px 0;
+}
+
+section:has(button) > section {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:has(button) > section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+section:has(button) img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-color);
+}
+
+section:has(button) h4 {
+  font-size: 1.25rem;
+  color: var(--text-main);
+  padding: 20px 20px 10px 20px;
+}
+
+section:has(button) p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  padding: 0 20px 20px 20px;
+  flex-grow: 1;
+}
+
+section:has(button) button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin: 0 20px 20px 20px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+section:has(button) button:hover {
+  background-color: var(--accent-hover);
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: var(--bg-card);
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+}
+
+form input[type="text"] {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-color);
+  padding: 14px 18px;
+  border-radius: 8px;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+form input[type="text"]:focus {
+  border-color: var(--accent-color);
+}
+
+form input[type="submit"] {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+form input[type="submit"]:hover {
+  background-color: var(--accent-hover);
+}
+
+form + p {
+  text-align: center;
+  margin-top: 15px;
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+footer {
+  border-top: 1px solid var(--border-color);
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background-color: rgba(11, 15, 25, 0.5);
+}
+
+footer img {
+  width: 28px;
+  height: 28px;
+  opacity: 0.7;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+footer img:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+  filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.5));
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  nav a {
+    margin: 0 10px;
+    font-size: 0.85rem;
+  }
+  section {
+    padding: 50px 15px;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+form textarea {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-color);
+  padding: 14px 18px;
+  border-radius: 8px;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  outline: none;
+  min-height: 120px;
+  resize: vertical; /* Позволяет пользователю растягивать поле только по высоте */
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+form textarea:focus {
+  border-color: var(--accent-color);
+}
