@@ -1,14 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
-  const [show, setShow] = useState(false);
+  const [count, setCount] = useState(0);
+  
+  useEffect(() => {
+    console.log("Count changed");
+  }, [count]);  
+
   return (
     <div>
-      <button onClick={() => setShow(!show)}>
-        {show ? "Hide" : "Show"}
-      </button>
-      {show && <h2>Welcome To React!</h2>}
-    </div>
+      <h1>{count}</h1>
+    <button onClick={() => setCount(count + 1)}>Increase</button>
+    </div> 
   )
 }
 
